@@ -46,6 +46,8 @@
 			<string>Some</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>https://raw.github.com/norio-nomura/Hangout-FX-Add-On/master/Manifest.plist</string>
 	<key>Website</key>
 	<string>https://github.com/norio-nomura/Hangout-FX-Add-On</string>
 </dict>
