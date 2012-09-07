@@ -37,47 +37,38 @@ gapi.hangout.av.effects.FaceTrackingFeature = {
 */
 
 (function () {
-  var url = null;
-  var elements = document.getElementsByTagName('SCRIPT');
-  for (var i = 0; i < elements.length;  i++) {
-    var element = elements.item(i);
-    if (element.src.match('.*Hangout-FX-Add-On.js$')) {
-      url = element.src.replace('Hangout-FX-Add-On.js', '');
-    }
-  }
-  if (url) {
-    var e = gadgets.views.getParams();
-    var appData = {
-      objs: [
-        {
-          t: 'cat',
-          id: 'Hangout-FX-Add-On',
-          name: 'Hangout-FX-Add-On'
-        }, {
-          cat: 'Hangout-FX-Add-On',
-          t: 'eff',
-          name: 'ano',
-          icon: url + 'ano-icon.png',   // icon url
-//          res: url + 'ano.png',   // icon url
-          res: 'https://raw.github.com/norio-nomura/Hangout-FX-Add-On/master/Hangout-FX-Add-On.safariextension/ano.png',    // resource
-          excl: 'face',   // exclusionTags. overhead, forehead, halo-horns, accent, face, eye, left-eye, right-eye, moustache, beard
-          tf: '',     // trackingFeature. See gapi.hangout.av.effects.FaceTrackingFeature
-          offx: 0.0,    // offset.x
-          offy: 0.0,    // offset.y
-          scale: 0.7, // scale
-          rot: 0.0,   // rotation
-          swf: true,  // scaleWithFace
-          rwf: true,  // rotateWithFace
-          on: true    //
-        }
-      ]
-    };
+  var e = gadgets.views.getParams();
+  var appData = {
+    objs: [
+      {
+        t: 'cat',
+        id: 'Hangout-FX-Add-On',
+        name: 'Hangout-FX-Add-On'
+      }, {
+        cat: 'Hangout-FX-Add-On',
+        t: 'eff',
+        name: 'ano',
+//        icon: url + 'ano-icon.png',   // icon url
+        icon: 'https://raw.github.com/norio-nomura/Hangout-FX-Add-On/master/Hangout-FX-Add-On.safariextension/ano-icon.png',
+//        res: url + 'ano.png',   // icon url
+        res: 'https://raw.github.com/norio-nomura/Hangout-FX-Add-On/master/Hangout-FX-Add-On.safariextension/ano.png',
+        excl: 'face',   // exclusionTags. overhead, forehead, halo-horns, accent, face, eye, left-eye, right-eye, moustache, beard
+        tf: '',     // trackingFeature. See gapi.hangout.av.effects.FaceTrackingFeature
+        offx: 0.0,    // offset.x
+        offy: 0.0,    // offset.y
+        scale: 0.7, // scale
+        rot: 0.0,   // rotation
+        swf: true,  // scaleWithFace
+        rwf: true,  // rotateWithFace
+        on: true    //
+      }
+    ]
+  };
 
-    e['appData'] = JSON.stringify(appData);
+  e['appData'] = JSON.stringify(appData);
 
-    gadgets.views.getParams = function() {
-      return e;
-    };
-    addExtensionPack();
-  }
+  gadgets.views.getParams = function() {
+    return e;
+  };
+  addExtensionPack();
 })();
