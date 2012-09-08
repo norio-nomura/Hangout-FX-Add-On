@@ -36,7 +36,6 @@
                         window.document.head.appendChild(script);
                     });
                 } else if (typeof chrome !== 'undefined') {
-                    var port = chrome.extension.connect({'name' : 'injectHTMLScriptElement'});
                     scriptFileNames.forEach(function (scriptFilename) {
                         var script = window.document.createElement('script');
                         script.src = chrome.extension.getURL(scriptFilename);
