@@ -29,7 +29,7 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Safari Extension demonstrating how adding items into Google Effects™ on Google Hangouts™.</string>
+	<string>Browser Extension demonstrating how adding items into Google Effects™ on Google Hangouts™.</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
