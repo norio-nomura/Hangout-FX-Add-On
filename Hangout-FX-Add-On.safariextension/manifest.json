@@ -1,0 +1,31 @@
+{
+  "name":"Hangout-FX-Add-On",
+  "version":"0.3",
+  "manifest_version":2,
+  "description":"Browser Extension demonstrating how adding items into Google Effects™ on Google Hangouts™.",
+  "icons":{
+    "16":"ano-16.png",
+    "48":"ano-48.png",
+    "128":"ano-128.png"
+  },
+  "content_scripts":[
+    {
+      "matches":[
+        "https://plus.google.com/hangouts/*",
+        "http://6gqjl36mjl1k7l1bp947kquf1536mgh6-a-hangout-opensocial.googleusercontent.com/*",
+        "https://6gqjl36mjl1k7l1bp947kquf1536mgh6-a-hangout-opensocial.googleusercontent.com/*"
+      ],
+      "js":[
+        "injectHTMLScriptElement.js"
+      ],
+      "run_at":"document_start",
+      "all_frames":true
+    }
+  ],
+  "permissions":[
+    "https://6gqjl36mjl1k7l1bp947kquf1536mgh6-a-hangout-opensocial.googleusercontent.com/"
+  ],
+  "web_accessible_resources":[
+    "Hangout-FX-Add-On.js"
+  ]
+}
