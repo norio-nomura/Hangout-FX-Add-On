@@ -3,8 +3,8 @@ Hangout-FX-Add-On
 Browser Extension demonstrating how adding items into Google Effects™ on Google Hangouts™.
 Download
 --------
-- Safari Extension [Hangout-FX-Add-On-0.3.safariextz](http://github.com/downloads/norio-nomura/Hangout-FX-Add-On/Hangout-FX-Add-On-0.3.safariextz)
-- Chrome Extension [Hangout-FX-Add-On](https://chrome.google.com/webstore/detail/fbdbggpagkfpeiiapcohmagfinckcfhj)
+- ~~Safari Extension [Hangout-FX-Add-On-0.3.safariextz]~~
+- ~~Chrome Extension [Hangout-FX-Add-On]~~
 
 Demo Video
 ----------
